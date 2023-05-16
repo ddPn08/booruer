@@ -1,0 +1,32 @@
+from pydantic import BaseModel
+
+class BooruPost(BaseModel):
+    id: int
+    created_at: str
+    score: int
+    width: int
+    height: int
+    md5: str
+    directory: str
+    image: str
+    rating: str
+    source: str
+    change: int
+    owner: str
+    creator_id: int
+    parent_id: int
+    sample: int
+    preview_height: int
+    preview_width: int
+    tags: str
+    title: str
+    has_notes: str
+    has_comments: str
+    file_url: str
+    preview_url: str
+    sample_url: str
+    sample_height: int
+    sample_width: int
+    status: str
+    post_locked: int
+    has_children: str

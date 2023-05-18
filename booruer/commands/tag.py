@@ -1,9 +1,9 @@
-import utils
 import glob
 import os
 from tqdm import tqdm
 
 from booruer.commands import command
+from booruer.utils import open_meta
 
 
 @command
@@ -20,7 +20,7 @@ def __run__(
     escape_bracket: bool = False,
 ):
     for meta_filepath in tqdm(glob.glob(os.path.join(dir, "*.json"))):
-        meta_data = utils.open_meta(meta_filepath)
+        meta_data = open_meta(meta_filepath)
 
         tag_string = f"{prefix}, " if prefix else ""
 
